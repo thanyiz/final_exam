@@ -492,8 +492,8 @@ def train(args):
         print("训练集与验证集加载完成")
         logger.info("训练集与验证集加载完成")
         print("-------------------------------")
-        if not os.path.exists(args.model_dir):
-            os.makedirs(args.model_dir)
+        # if not os.path.exists(args.model_dir):
+        #     os.makedirs(args.model_dir)
 
         # scheduler
         if args.whether_warm_up:

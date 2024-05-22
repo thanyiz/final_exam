@@ -521,6 +521,20 @@ def train(args):
             best_pairs_epoch,
             best_triple_epoch,
         ) = (0, 0, 0, 0, 0)
+        (
+            best_aspect_precision,
+            best_opinion_precision,
+            best_APCE_precision,
+            best_pairs_precision,
+            best_triple_precision,
+        ) = (0, 0, 0, 0, 0)
+        (
+            best_aspect_recall,
+            best_opinion_recall,
+            best_APCE_recall,
+            best_pairs_recall,
+            best_triple_recall,
+        ) = (0, 0, 0, 0, 0)
         for i in range(args.epochs):
             logger.info(("Epoch:{}".format(i)))
             for j in tqdm.trange(trainset.batch_count):
